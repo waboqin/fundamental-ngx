@@ -314,6 +314,7 @@ import { TableCdkExampleComponent } from './component-docs/table/examples/table-
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DatetimePickerAllowNullExampleComponent } from './component-docs/datetime-picker/examples/datetime-allow-null-example/datetime-allow-null-example.component';
 import { DatePickerAllowNullExampleComponent } from './component-docs/date-picker/examples/date-picker-allow-null-example.component';
+import { DateTimeFormExampleComponent } from './component-docs/datetime-picker/examples/datetime-form-example/datetime-form-example.component';
 
 export function highlightJsFactory() {
     return hljs;
@@ -403,6 +404,7 @@ export function highlightJsFactory() {
         DatetimeNonMeridianExampleComponent,
         DatetimeProgramExampleComponent,
         DatetimePickerAllowNullExampleComponent,
+        DateTimeFormExampleComponent,
         DropdownContextualMenuExampleComponent,
         DropdownDefaultExampleComponent,
         DropdownIconsExampleComponent,

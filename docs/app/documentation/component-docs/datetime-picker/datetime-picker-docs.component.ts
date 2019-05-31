@@ -11,6 +11,8 @@ import * as dateTimeProgTs from '!raw-loader!./examples/datetime-program-example
 
 import * as dateTimePickerAllowNullTs from '!raw-loader!./examples/datetime-allow-null-example/datetime-allow-null-example.component.ts';
 
+import * as dateTimePickerFormHtml from '!raw-loader!./examples/datetime-form-example/datetime-form-example.component.html';
+import * as dateTimePickerFormTs from '!raw-loader!./examples/datetime-form-example/datetime-form-example.component.ts';
 
 @Component({
     selector: 'app-datetime-picker-docs',
@@ -18,7 +20,6 @@ import * as dateTimePickerAllowNullTs from '!raw-loader!./examples/datetime-allo
     styleUrls: ['./datetime-picker-docs.component.scss']
 })
 export class DatetimePickerDocsComponent {
-
     datetimePickerSingleHtml = dateTimeSimpleHtml;
     datetimePickerSingleTs = dateTimeSimpleTs;
 
@@ -30,4 +31,6 @@ export class DatetimePickerDocsComponent {
 
     datetimePickerAllowNullTs = dateTimePickerAllowNullTs;
 
+    datetimePickerFormHtml = dateTimePickerFormHtml;
+    datetimePickerFormTs = dateTimePickerFormTs;
 }

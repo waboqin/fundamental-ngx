@@ -1,0 +1,10 @@
+<form [formGroup]="customForm">
+    <div fd-form-set>
+        <div fd-form-item>
+            <label fd-form-label for="input-1">Default Input:</label>
+            <fd-datetime-picker formControlName="date" name="input-1"></fd-datetime-picker>
+        </div>
+    </div>
+</form>
+
+Selected Date: {{ customForm.controls.date.value }}
