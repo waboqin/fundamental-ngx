@@ -8,6 +8,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class DateTimeFormExampleComponent {
     customForm = new FormGroup({
-        date: new FormControl('', Validators.required)
+        date: new FormControl('')
     });
 }
