@@ -29,10 +29,4 @@ describe('ShellbarActionsComponent', () => {
     it('should create', () => {
         expect(component).toBeTruthy();
     });
-
-    it('should handle window resize', () => {
-        const resizeSpy = spyOn(component, 'onResize');
-        window.dispatchEvent(new Event('resize'));
-        expect(resizeSpy).toHaveBeenCalled();
-    });
 });

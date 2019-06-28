@@ -1,9 +1,7 @@
 import {
     Component,
     ContentChildren,
-    HostListener,
     Input,
-    OnInit,
     AfterContentChecked,
     QueryList,
     ViewEncapsulation,
@@ -38,9 +36,7 @@ import { SearchInputComponent } from '../../search-input/search-input.component'
     styleUrls: ['./shellbar-actions.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
-    /** @hidden */
-    actionsCollapsed: boolean = false;
+export class ShellbarActionsComponent implements AfterContentChecked {
 
     /** @hidden */
     showCollapsedProducts: boolean = false;
@@ -71,17 +67,6 @@ export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
 
     /** @hidden */
     totalNotifications: number;
-
-    /** @hidden */
-    @HostListener('window:resize', [])
-    onResize() {
-        this.actionsCollapsed = window.innerWidth < 1024;
-    }
-
-    /** @hidden */
-    ngOnInit() {
-        this.onResize();
-    }
 
     /** @hidden */
     ngAfterContentChecked() {
