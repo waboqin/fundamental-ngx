@@ -68,11 +68,15 @@ export class AlertDocsComponent {
     alertBasicExample: ExampleFile[] = [
         {
             language: 'html',
-            code: alertExampleHtml
+            code: alertExampleHtml,
+            name: 'alert-example.component.html'
         },
         {
             language: 'typescript',
-            code: alertExampleTs
+            code: alertExampleTs,
+            name: 'alert-example.component.ts',
+            tagname: 'fd-alert-example',
+            component: 'AlertExampleComponent'
         }
     ];
 

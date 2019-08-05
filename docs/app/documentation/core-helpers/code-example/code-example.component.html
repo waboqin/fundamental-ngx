@@ -5,13 +5,19 @@
             (click)="isOpen = !isOpen">
         {{isOpen ? 'Hide' : 'Show'}} Code
     </button>
-    <div>
+    <div *ngIf="isOpen">
         <button fd-button glyph="copy"
                 title="Copy example to clipboard"
                 fdType="light"
-                (click)="copyText()"
-                *ngIf="isOpen">
+                (click)="copyText()">
             Copy
+        </button>
+        <button fd-button 
+                glyph="edit-outside" 
+                fdType="light"
+                (click)="openCode()"
+                title="open the code in StackBlitz">
+                Open in StackBlitz
         </button>
     </div>
 </div>
