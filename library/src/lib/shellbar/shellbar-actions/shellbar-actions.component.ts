@@ -11,7 +11,11 @@ import {
 } from '@angular/core';
 import { ShellbarActionComponent } from '../shellbar-action/shellbar-action.component';
 import { SearchInputComponent } from '../../search-input/search-input.component';
+import { ShellbarMenuItem } from '../model/shellbar-menu-item';
+import { ShellbarProduct } from '../model/shellbar-product';
+import { ShellbarUser } from '../model/shellbar-user';
 import { PopoverComponent } from '../../popover/popover.component';
+import { ComboboxComponent } from '../../combobox/combobox.component';
 
 /**
  * The component that represents shellbar actions.
@@ -49,15 +53,15 @@ export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
 
     /** The product switcher data. */
     @Input()
-    productSwitcher: any[];
+    productSwitcher: ShellbarProduct[];
 
     /** The user data. */
     @Input()
-    user: any;
+    user: ShellbarUser;
 
     /** The user menu data. */
     @Input()
-    userMenu: any[];
+    userMenu: ShellbarMenuItem[];
 
     /** When set to true, popover list will be closed after selecting the option */
     @Input()
@@ -76,15 +80,15 @@ export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
     popoverComponents: QueryList<PopoverComponent>;
 
     /** @hidden */
-    @ContentChild(SearchInputComponent)
-    searchInputComponent: SearchInputComponent;
+    @ContentChild(ComboboxComponent)
+    comboboxComponent: ComboboxComponent;
 
     /** @hidden */
     totalNotifications: number;
 
     /** @hidden */
     @HostListener('window:resize', [])
-    onResize() {
+    onResize(): void {
         this.actionsCollapsed = window.innerWidth < 1024;
     }
 
@@ -99,12 +103,12 @@ export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
     }
 
     /** @hidden */
-    ngOnInit() {
+    ngOnInit(): void {
         this.onResize();
     }
 
     /** @hidden */
-    ngAfterContentChecked() {
+    ngAfterContentChecked(): void {
         this.totalNotifications = 0;
         this.shellbarActions.forEach((action) => {
             if (action.notificationCount && typeof action.notificationCount === 'number') {
@@ -114,7 +118,7 @@ export class ShellbarActionsComponent implements OnInit, AfterContentChecked {
     }
 
     /** @hidden */
-    toggleCollapsedProducts(event) {
+    toggleCollapsedProducts(event: MouseEvent): void {
         event.preventDefault();
         event.stopPropagation();
         this.showCollapsedProducts = !this.showCollapsedProducts;

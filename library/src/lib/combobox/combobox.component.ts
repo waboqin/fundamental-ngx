@@ -39,7 +39,7 @@ import { takeUntil } from 'rxjs/operators';
         MenuKeyboardService
     ],
     host: {
-        '[class.fd-combobox-custom-class]': 'true',
+        '[class.fd-combobox-custom-class]': '!inShellbar',
         '[class.fd-combobox-input]': 'true'
     },
     encapsulation: ViewEncapsulation.None
@@ -58,6 +58,10 @@ export class ComboboxComponent implements ControlValueAccessor, OnInit, OnChange
     /** Whether the search input is disabled. **/
     @Input()
     disabled: boolean;
+
+    /** */
+    @Input()
+    inShellbar: boolean;
 
     /** Placeholder of the search input. **/
     @Input()
@@ -130,12 +134,15 @@ export class ComboboxComponent implements ControlValueAccessor, OnInit, OnChange
     private readonly onDestroy$: Subject<void> = new Subject<void>();
 
     /** @hidden */
-    onChange: any = () => {};
+    onChange: any = () => {
+    };
 
     /** @hidden */
-    onTouched: any = () => {};
+    onTouched: any = () => {
+    };
 
-    constructor(private menuKeyboardService: MenuKeyboardService) {}
+    constructor(private menuKeyboardService: MenuKeyboardService) {
+    }
 
     /** @hidden */
     ngOnInit() {
@@ -166,7 +173,8 @@ export class ComboboxComponent implements ControlValueAccessor, OnInit, OnChange
             .pipe(takeUntil(this.onDestroy$))
             .subscribe(index => this.onMenuClickHandler(index));
         this.menuKeyboardService.focusEscapeBeforeList = () => this.searchInputElement.nativeElement.focus();
-        this.menuKeyboardService.focusEscapeAfterList = () => {};
+        this.menuKeyboardService.focusEscapeAfterList = () => {
+        };
     }
 
     /** @hidden */
