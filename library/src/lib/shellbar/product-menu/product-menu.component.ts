@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ShellbarMenuItem } from '../model/shellbar-menu-item';
 import { PopoverComponent } from '../../popover/popover.component';
 
