@@ -41,6 +41,7 @@ export class DocumentationComponent implements OnInit {
         { url: 'menu', name: 'Menu' },
         { url: 'modal', name: 'Modal' },
         { url: 'multi-input', name: 'Multi Input' },
+        { url: 'notification', name: 'Notification' },
         { url: 'pagination', name: 'Pagination' },
         { url: 'popover', name: 'Popover' },
         { url: 'radio', name: 'Radio Button' },

@@ -1,0 +1,77 @@
+<h2>Notification</h2>
+<description>
+    Noitification Component...
+</description>
+<component-example [name]="'ex1'">
+    <fd-notification-options-example></fd-notification-options-example>
+</component-example>
+
+<separator></separator>
+
+<h2>Template as Content</h2>
+<description>
+    The NotificationService allows passing in a template reference as the content of the notification. Add <code>let-notification</code> to
+    the template element to access the injected <code>NotificationRef</code>.
+    <br/><br/>
+    The example also features a confirmation modal. Subscribe to <code>afterClosed</code> to access the returned value.
+    A dismissal will trigger an error on the observable, similar to rejecting a promise.
+</description>
+<component-example [name]="'ex2'">
+    <fd-notification-open-template-example></fd-notification-open-template-example>
+</component-example>
+<!--<code-example [exampleFiles]="templateModal"></code-example>-->
+
+<separator></separator>
+
+<h2>Component as Content</h2>
+<description>
+    A component type can be passed to the NotificationService open method as the content of the modal. Inject
+    <code>NotificationRef</code> inside the content component to access methods such as close and dismiss.
+    <br/><br/>
+    The example also features a modal with a scrollable body.
+</description>
+<component-example [name]="'ex3'">
+    <fd-notification-component-as-content-example></fd-notification-component-as-content-example>
+</component-example>
+<!--<code-example [exampleFiles]="componentAsContentSource"></code-example>-->
+
+<separator></separator>
+
+<h2>Notification Groups</h2>
+<description>
+
+</description>
+<component-example [name]="'ex4'">
+    <fd-notification-group-template-example></fd-notification-group-template-example>
+</component-example>
+<!--<code-example [exampleFiles]="position"></code-example>-->
+
+<separator></separator>
+
+<h2>Notifications From Object</h2>
+<description>
+
+</description>
+<component-example [name]="'ex5'">
+    <fd-notification-component-as-object-example></fd-notification-component-as-object-example>
+</component-example>
+<!--<code-example [exampleFiles]="position"></code-example>-->
+
+<separator></separator>
+
+<description>
+    <p>
+        Modals make use of a singleton service called <code>ModalService</code>.
+        It provides the ability to <code>open()</code> modal windows.
+    </p>
+    <p>
+        The <code>open()</code> method accepts either a TemplateRef or Component as modal content. In addition, you may optionally provide a ModalConfig object to override some system-default modal window behaviours.
+    </p>
+    <p>
+        When a modal window is opened, the content is positioned in a parent element that is appended to the body.
+    </p>
+    <p>
+        Importing one of <code>BrowserAnimationsModule</code> or <code>NoopAnimationsModule</code> is required.
+        The first is the standard Angular animation module, it animates content as expected. NoopAnimationsModule mocks the animations and does not render them, potentially increasing performance.
+    </p>
+</description>

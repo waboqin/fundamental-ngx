@@ -104,6 +104,10 @@ import { SelectHeaderComponent } from './component-docs/select/select-header/sel
 import { SelectDocsComponent } from './component-docs/select/select-docs.component';
 import { MegaMenuHeaderComponent } from './component-docs/mega-menu/mega-menu-header/mega-menu-header.component';
 import { MegaMenuDocsComponent } from './component-docs/mega-menu/mega-menu-docs.component';
+import { NotificationHeaderComponent } from '../../../library/src/lib/notification/notification-header/notification-header.component';
+import { NotificationComponent } from '../../../library/src/lib/notification/notification/notification.component';
+import { NotificationDocsComponent } from './component-docs/notification/notification-docs.component';
+import { NotificationDocsHeaderComponent } from './component-docs/notification/notification-docs-header/notification-docs-header.component';
 
 export const ROUTES: Routes = [
     {
@@ -243,6 +247,11 @@ export const ROUTES: Routes = [
             },
             { path: 'multi-input', component: MultiInputHeaderComponent, children: [
                     { path: '', component: MultiInputDocsComponent},
+                    { path: 'api', component: ApiComponent, data: {content: API_FILES.multiInput}}
+                ]
+            },
+            { path: 'notification', component: NotificationDocsHeaderComponent, children: [
+                    { path: '', component: NotificationDocsComponent},
                     { path: 'api', component: ApiComponent, data: {content: API_FILES.multiInput}}
                 ]
             },
