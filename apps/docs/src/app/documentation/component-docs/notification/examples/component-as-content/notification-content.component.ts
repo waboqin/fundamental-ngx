@@ -9,7 +9,7 @@ import { NotificationRef } from '@fundamental-ngx/core';
         </fd-notification-header>
         <fd-notification-body>
             <div fd-notification-content>
-                <div fd-notification__avatar>
+                <div fd-notification-avatar>
                     <span fd-identifier [size]="'s'" [circle]="true" aria-label="John Doe">JD</span>
                 </div>
                 <div fd-notification-text>
@@ -22,14 +22,14 @@ import { NotificationRef } from '@fundamental-ngx/core';
                 </div>
             </div>
             <fd-notification-footer>
-                <button class="fd-button--light">                        
+                <button fd-button [options]="'light'">                        
                     {{notificationRef.data.moreInfo}}
                 </button>
                 <div fd-notification-actions>
-                    <button class="fd-button--positive" (click)="notificationRef.close('Approve Button Click')">
+                    <button fd-button [fdType]="'positive'" (click)="notificationRef.close('Approve Button Click')">
                         {{notificationRef.data.approve}}
                     </button>
-                    <button class="fd-button--negative" (click)="notificationRef.dismiss('Cancel Button Click')">
+                    <button fd-button [fdType]="'positive'" (click)="notificationRef.dismiss('Cancel Button Click')">
                         {{notificationRef.data.cancel}}
                     </button>
                 </div>
@@ -40,6 +40,5 @@ import { NotificationRef } from '@fundamental-ngx/core';
 export class NotificationContentComponent {
     constructor(
         public notificationRef: NotificationRef
-    ) {
-    }
+    ) {}
 }

@@ -1,9 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { NgModule, TemplateRef, Component, ViewChild } from '@angular/core';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
-import { NotificationModule } from '@fundamental-ngx/core';
-import { NotificationRef } from '@fundamental-ngx/core/src/lib/notification/notification-utils/notification-ref';
-import { NotificationGroupComponent } from '@fundamental-ngx/core/src/lib/notification/notification-group/notification-group.component';
+import { NotificationModule, NotificationRef, NotificationService } from '@fundamental-ngx/core';
 
 @Component({
     template: `        

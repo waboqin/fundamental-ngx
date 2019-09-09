@@ -46,8 +46,8 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {LocalizationEditorModule} from './localizator-editor/localization-editor.module';
 import { MegaMenuModule } from './mega-menu/mega-menu.module';
-import { NotificationModule } from '@fundamental-ngx/core/src/lib/notification/notification.module';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
+import { NotificationModule } from './notification/notification.module';
+import { NotificationService } from './notification/notification-service/notification.service';
 
 @NgModule({
   imports: [CommonModule, FormsModule],

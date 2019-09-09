@@ -15,12 +15,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
         }
     `],
     host: {
-        // '[@modal-fade]': '',
         '[class.fd-notification-container]': 'true'
     },
-    animations: [
-        // modalFadeNgIf
-    ],
     encapsulation: ViewEncapsulation.None
 })
 export class NotificationContainer {}

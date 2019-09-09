@@ -39,17 +39,13 @@ export type NotificationSize = 's' | 'm';
 })
 export class NotificationComponent implements AfterViewInit {
 
-    /** Size of notification, defined by user, s or m*/
+    /** Size of notification, defined by user, s or m */
     @Input()
     size: string;
 
-    /** state success, warning, information, error */
+    /** Type of Notification 'success' | 'warning' | 'information' | 'error' */
     @Input()
     type: NotificationType;
-
-    /** */
-    @Input()
-    closeButton: boolean = true;
 
     @ViewChild('vc', { read: ViewContainerRef })
     containerRef: ViewContainerRef;

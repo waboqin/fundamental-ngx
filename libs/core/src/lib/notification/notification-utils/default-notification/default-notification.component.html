@@ -7,7 +7,7 @@
 </fd-notification-header>
 <fd-notification-body>
     <div fd-notification-content>
-        <div fd-notification__avatar *ngIf="defaultConfigurationNotification?.avatar">
+        <div fd-notification-avatar *ngIf="defaultConfigurationNotification?.avatar">
             <ng-container *ngTemplateOutlet="defaultConfigurationNotification?.avatar"></ng-container>
         </div>
         <div fd-notification-text>

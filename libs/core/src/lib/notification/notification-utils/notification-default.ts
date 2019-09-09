@@ -1,4 +1,4 @@
-import { ElementRef, TemplateRef } from '@angular/core';
+import { TemplateRef } from '@angular/core';
 
 /**
  * Object to generate default notification component, without creating any template.
