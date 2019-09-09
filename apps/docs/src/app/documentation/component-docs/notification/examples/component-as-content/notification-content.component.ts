@@ -29,7 +29,7 @@ import { NotificationRef } from '@fundamental-ngx/core';
                     <button fd-button [fdType]="'positive'" (click)="notificationRef.close('Approve Button Click')">
                         {{notificationRef.data.approve}}
                     </button>
-                    <button fd-button [fdType]="'positive'" (click)="notificationRef.dismiss('Cancel Button Click')">
+                    <button fd-button [fdType]="'negative'" (click)="notificationRef.dismiss('Cancel Button Click')">
                         {{notificationRef.data.cancel}}
                     </button>
                 </div>

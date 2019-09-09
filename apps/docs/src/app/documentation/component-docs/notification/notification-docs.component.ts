@@ -1,29 +1,83 @@
 import { Component } from '@angular/core';
 
-// import * as templateTs from '!raw-loader!./examples/template-as-content/modal-open-template-example.component.ts';
-// import * as templateHtml from '!raw-loader!./examples/template-as-content/modal-open-template-example.component.html';
-// import * as componentAsContentSrc from '!raw-loader!./examples/component-as-content/modal-component-as-content-example.component.ts';
-// import * as contentSrc from '!raw-loader!./examples/component-as-content/modal-content.component.ts';
-// import * as modalInModalExample from '!raw-loader!./examples/stackable-modals/modal-in-modal-example.component.ts';
-// import * as modalInModalComponent from '!raw-loader!./examples/stackable-modals/modal-in-modal.component.ts';
-// import * as modalInModalSecondComponent from '!raw-loader!./examples/stackable-modals/modal-in-modal-second.component.ts';
-// import * as fsModalSource from '!raw-loader!./examples/fullscreen-modal/modal-fullscreen-example.component.html';
-// import * as fsModalSourceT from '!raw-loader!./examples/fullscreen-modal/modal-fullscreen-example.component.ts';
-// import * as backdropT from '!raw-loader!./examples/backdrop-examples/backdrop-examples.component.ts';
-// import * as backdropH from '!raw-loader!./examples/backdrop-examples/backdrop-examples.component.html';
-// import * as positionH from '!raw-loader!./examples/modal-position/modal-position-example.component.html';
-// import * as positionT from '!raw-loader!./examples/modal-position/modal-position-example.component.ts';
-// import * as containerH from '!raw-loader!./examples/container/container.component.html';
-// import * as containerT from '!raw-loader!./examples/container/container.component.ts';
+import * as componentAsContentTs from '!raw-loader!./examples/component-as-content/notification-component-as-content-example.component.ts';
+import * as contentTs from '!raw-loader!./examples/component-as-content/notification-content.component.ts';
+import * as groupTs from '!raw-loader!./examples/group-notification/notification-group-template-example.component.ts';
+import * as groupH from '!raw-loader!./examples/group-notification/notification-group-template-example.component.html';
+import * as optionsTs from '!raw-loader!./examples/notification-options/notification-options-example.component.ts';
+import * as optionsH from '!raw-loader!./examples/notification-options/notification-options-example.component.html';
+import * as templateTs from '!raw-loader!./examples/template-as-content/notification-open-template-example.component.ts';
+import * as templateH from '!raw-loader!./examples/template-as-content/notification-open-template-example.component.html';
+import * as objectTs from '!raw-loader!./examples/notification-as-object.component.ts';
 import { Schema } from '../../../schema/models/schema.model';
 import { SchemaFactoryService } from '../../../schema/services/schema-factory/schema-factory.service';
 import { NotificationService } from '@fundamental-ngx/core';
+import { ExampleFile } from '../../core-helpers/code-example/example-file';
 
 @Component({
     selector: 'app-notification',
     templateUrl: './notification-docs.component.html'
 })
 export class NotificationDocsComponent {
+
+    componentAsContent: ExampleFile[] = [
+        {
+            language: 'typescript',
+            code: componentAsContentTs,
+            name: 'Usage of Component'
+        },
+        {
+            language: 'typescript',
+            code: contentTs,
+            name: 'Content'
+        }
+    ];
+
+    groups: ExampleFile[] = [
+        {
+            language: 'typescript',
+            code: groupTs
+        },
+        {
+            language: 'html',
+            code: groupH
+        }
+    ];
+
+    options: ExampleFile[] = [
+        {
+            language: 'typescript',
+            code: optionsTs
+        },
+        {
+            language: 'html',
+            code: optionsH
+        },
+        {
+            language: 'typescript',
+            code: contentTs,
+            name: 'Content'
+        }
+    ];
+
+    template: ExampleFile[] = [
+        {
+            language: 'typescript',
+            code: templateTs
+        },
+        {
+            language: 'html',
+            code: templateH
+        },
+    ];
+
+    object: ExampleFile[] = [
+        {
+            language: 'typescript',
+            code: objectTs
+        }
+    ]
+
 
     // static schema: any = {
     //     properties: {

@@ -13,15 +13,15 @@
                 <span fd-identifier [size]="'s'" [glyph]="'washing-machine'"></span>
             </div>
             <div fd-notification-text>
-                <div fd-notification-description>dsajidjasid asoidjasoid as</div>
-                <div fd-notification-metadata> dsad jasiod jasoid jioas jda</div>
+                <div fd-notification-description>Notification Description</div>
+                <div fd-notification-metadata>Notification Metadata</div>
             </div>
         </div>
         <fd-notification-footer>
-            <button class="fd-button--light">More Info</button>
+            <button fd-button [options]="'light'">More Info</button>
             <div fd-notification-actions>
-                <button class="fd-button--positive" (click)="notification.close('Approve Button Click')">Approve</button>
-                <button class="fd-button--negative" (click)="notification.dismiss('Reject Button Click')">Reject</button>
+                <button fd-button [fdType]="'positive'"  (click)="notification.close('Approve Button Click')">Approve</button>
+                <button fd-button [fdType]="'negative'"  (click)="notification.dismiss('Reject Button Click')">Reject</button>
             </div>
         </fd-notification-footer>
     </fd-notification-body>
