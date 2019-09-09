@@ -1,6 +1,8 @@
 <h2>Notification</h2>
 <description>
-    Notification Component can be used with a lot of different types and sizes.
+    Notification Component can be used with a lot of different types and sizes. Also there is example of container usage.
+    It is possible to provide container reference, where should the notification belong. By default it is a <code>body</code>
+    element.
 </description>
 <component-example [name]="'ex1'">
     <fd-notification-options-example></fd-notification-options-example>
@@ -29,8 +31,6 @@
 <description>
     A component type can be passed to the NotificationService open method as the content of the modal. Inject
     <code>NotificationRef</code> inside the content component to access methods such as close and dismiss.
-    <br/><br/>
-    The example also features a modal with a scrollable body.
 </description>
 <component-example [name]="'ex3'">
     <fd-notification-component-as-content-example></fd-notification-component-as-content-example>
@@ -41,7 +41,7 @@
 
 <h2>Notification Groups</h2>
 <description>
-
+    Notifications can be used with groups. Groups allow to maintain all belonged notifications.
 </description>
 <component-example [name]="'ex4'">
     <fd-notification-group-template-example></fd-notification-group-template-example>
@@ -52,7 +52,8 @@
 
 <h2>Notifications From Object</h2>
 <description>
-
+    Notifications can be opened without creating separated templates, to achieve it, it is needed to pass <code>NotificationDefault</code>
+    object instead of content.
 </description>
 <component-example [name]="'ex5'">
     <fd-notification-component-as-object-example></fd-notification-component-as-object-example>
