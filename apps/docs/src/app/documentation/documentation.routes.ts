@@ -104,8 +104,6 @@ import { SelectHeaderComponent } from './component-docs/select/select-header/sel
 import { SelectDocsComponent } from './component-docs/select/select-docs.component';
 import { MegaMenuHeaderComponent } from './component-docs/mega-menu/mega-menu-header/mega-menu-header.component';
 import { MegaMenuDocsComponent } from './component-docs/mega-menu/mega-menu-docs.component';
-import { NotificationHeaderComponent } from '../../../library/src/lib/notification/notification-header/notification-header.component';
-import { NotificationComponent } from '../../../library/src/lib/notification/notification/notification.component';
 import { NotificationDocsComponent } from './component-docs/notification/notification-docs.component';
 import { NotificationDocsHeaderComponent } from './component-docs/notification/notification-docs-header/notification-docs-header.component';
 
