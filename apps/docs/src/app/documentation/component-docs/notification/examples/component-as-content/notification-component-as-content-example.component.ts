@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
+import { NotificationService } from '@fundamental-ngx/core';
 import { NotificationContentComponent } from './notification-content.component';
 
 @Component({
@@ -17,8 +17,6 @@ export class NotificationComponentAsContentExampleComponent {
     constructor (
         private notificationService: NotificationService
     ) {}
-
-
 
     open() {
         const notificationService = this.notificationService.open(NotificationContentComponent, {

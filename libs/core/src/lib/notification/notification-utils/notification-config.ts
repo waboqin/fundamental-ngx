@@ -8,10 +8,10 @@ export class NotificationConfig {
     /** Id for the modal component. If omitted, a unique one is generated. */
     id?: string;
 
-    /**  */
+    /** size of notification: 's' | 'm' */
     size?: NotificationSize;
 
-    /**  */
+    /** Type of notification: 'success' | 'warning' | 'information' | 'error' */
     type?: NotificationType;
 
     /** Aria label for the modal component element. */

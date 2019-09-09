@@ -35,10 +35,9 @@ export type NotificationSize = 's' | 'm';
         '[attr.aria-label]': 'ariaLabel',
         'role': 'notification',
         '[attr.id]': 'id',
-        // '[@fadeAlertNgIf]': ''
     }
 })
-export class NotificationComponent implements OnDestroy, AfterViewInit {
+export class NotificationComponent implements AfterViewInit {
 
     /** Size of notification, defined by user, s or m*/
     @Input()
@@ -79,18 +78,10 @@ export class NotificationComponent implements OnDestroy, AfterViewInit {
 
     private componentRef: ComponentRef<any> | EmbeddedViewRef<any>;
 
-    private focusTrap: any;
-
     constructor(private elRef: ElementRef,
                 private componentFactoryResolver: ComponentFactoryResolver,
                 private cdRef: ChangeDetectorRef,
                 @Optional() private notificationRef: NotificationRef) {
-    }
-
-    ngOnDestroy(): void {
-        if (this.focusTrap) {
-            this.focusTrap.deactivate();
-        }
     }
 
     ngAfterViewInit(): void {
@@ -101,18 +92,6 @@ export class NotificationComponent implements OnDestroy, AfterViewInit {
                 this.loadFromTemplate(this.childComponentType);
             } else {
                 this.createFromDefaultConfiguration(this.childComponentType);
-            }
-        }
-        if (this.focusTrapped) {
-            try {
-                this.focusTrap = focusTrap(this.elRef.nativeElement, {
-                    clickOutsideDeactivates: this.backdropClickCloseable && this.hasBackdrop,
-                    escapeDeactivates: false,
-                    initialFocus: this.elRef.nativeElement
-                });
-                this.focusTrap.activate();
-            } catch (e) {
-                console.warn('Attempted to focus trap the modal, but no tabbable elements were found.');
             }
         }
         this.cdRef.detectChanges();
@@ -126,7 +105,6 @@ export class NotificationComponent implements OnDestroy, AfterViewInit {
     }
 
     private createFromDefaultConfiguration(conf: NotificationDefault): void {
-        console.log(123);
         this.containerRef.clear();
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(DefaultNotificationComponent);
         this.componentRef = this.containerRef.createComponent(componentFactory);

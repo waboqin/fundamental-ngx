@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 // import * as containerT from '!raw-loader!./examples/container/container.component.ts';
 import { Schema } from '../../../schema/models/schema.model';
 import { SchemaFactoryService } from '../../../schema/services/schema-factory/schema-factory.service';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
+import { NotificationService } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'app-notification',

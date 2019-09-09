@@ -1,6 +1,6 @@
 import { Component, ComponentRef } from '@angular/core';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
-import { NotificationGroupComponent } from '@fundamental-ngx/core/src/lib/notification/notification-group/notification-group.component';
+import { NotificationService } from '@fundamental-ngx/core';
+import { NotificationGroupComponent } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'fd-notification-group-template-example',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
+import { NotificationService } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'fd-notification-open-template-example',

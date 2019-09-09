@@ -8,8 +8,10 @@ import { NotificationType } from '../../notification/notification.component';
 })
 export class DefaultNotificationComponent {
 
+    /** @hidden */
     defaultConfigurationNotification: NotificationDefault;
 
+    /** */
     type?: NotificationType;
 
 }

@@ -1,15 +1,11 @@
 import {
-    AfterViewInit,
-    ChangeDetectorRef,
     Component,
-    ElementRef,
-    OnInit,
     ViewChild,
     ViewContainerRef,
     ViewEncapsulation
 } from '@angular/core';
 import { NotificationContentComponent } from '../component-as-content/notification-content.component';
-import { NotificationService } from '@fundamental-ngx/core/src/lib/notification/notification-service/notification.service';
+import { NotificationService } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'fd-notification-options-example',

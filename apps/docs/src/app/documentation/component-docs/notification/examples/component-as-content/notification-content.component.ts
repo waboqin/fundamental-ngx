@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationRef } from '@fundamental-ngx/core/src/lib/notification/notification-utils/notification-ref';
+import { NotificationRef } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'fd-notification-content',
